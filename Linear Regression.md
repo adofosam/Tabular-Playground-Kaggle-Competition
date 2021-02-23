@@ -57,10 +57,13 @@ length(which(abs(out)>3))
 
 #Compute Cook's Distances
 cd <- cooks.distance(mod.1)
+
 #Compare Cook's Distances to 50th percentile of F distribution with 2 and 28 DF
 F_thresh <- qf(.50,ncol(training)-2,nrow(training)-((ncol(training) - 1)+1))  
+
 #Find which cooks distances are greater than the F threshold. 
 #The which() function returns the element, or position, of the observation(s) satisifying the logical condition
+
 which(cd > F_thresh)
 ```
 While there are ostensibly no influential points, let's remove the outliers and see how well the model performs
