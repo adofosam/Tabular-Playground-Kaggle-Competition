@@ -103,7 +103,7 @@ summary(mod.3)
 Not much has changed in this respect. 
 
 ## Let's now test the Root Mean Squared Error (RMSE) 
-The RMSE is the 
+The RMSE is the metric the competition is evaluating the model.
 ```{r}
 pred <- predict(mod.2, newdata = testing)
 RMSE = sqrt(sum((testing$target - pred)^2)/nrow(testing))
