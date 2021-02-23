@@ -116,5 +116,11 @@ pred.2 <- predict(mod.3, newdata = testing)
 RMSE = sqrt(sum((testing$target - pred)^2)/nrow(testing))
 RMSE
 ```
+|RSME mod.2 = 0.725| RSME mod.3 = 0.725|
+|---|---|
+
+Strange to me they were both the same, but both performed the same when submitted to Kaggle.
+
+This is the finale to my linear regression model. I then decided to use Random Forst Regression, but that almost crashed my laptop (I should have forseen that). Instead, I went and decided to use Extreme Gradient Boosting.
 
 
